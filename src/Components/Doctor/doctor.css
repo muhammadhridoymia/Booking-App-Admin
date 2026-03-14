@@ -1,0 +1,268 @@
+.doctor-container {
+    padding: 20px;
+}
+
+/* Stats Cards */
+.doctor-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.stat-icon.total { background: #e3f2fd; color: #1976d2; }
+.stat-icon.available { background: #e8f5e9; color: #2e7d32; }
+.stat-icon.unavailable { background: #ffebee; color: #c62828; }
+.stat-icon.avg-rating { background: #fff3e0; color: #f57c00; }
+
+.stat-details h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.stat-details p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Doctor Info Cell */
+.doctor-info-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 200px;
+}
+
+.doctor-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.doctor-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.doctor-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-name {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.doctor-education {
+    font-size: 11px;
+    color: #666;
+}
+
+/* Fee */
+.fee {
+    font-weight: 600;
+    color: #27ae60;
+}
+
+/* Availability Button */
+.availability-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 100px;
+}
+
+.availability-btn.available {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.availability-btn.available:hover {
+    background: #c8e6c9;
+}
+
+.availability-btn.unavailable {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.availability-btn.unavailable:hover {
+    background: #ffcdd2;
+}
+
+.availability-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.next-available {
+    font-size: 10px;
+    color: #666;
+    margin-top: 3px;
+    text-align: center;
+}
+
+/* Languages */
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.language-tag {
+    background: #f0f0f0;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    color: #555;
+}
+
+.more-languages {
+    background: #e0e0e0;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    color: #555;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.action-btn {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s;
+    background: #f8f9fa;
+    color: #666;
+}
+
+.action-btn.delete:hover {
+    background: #ffebee;
+    color: #c62828;
+    transform: scale(1.1);
+}
+
+.action-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Updating Row */
+tr.updating {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* No Data */
+.no-data {
+    text-align: center;
+    padding: 50px;
+    color: #999;
+    font-size: 16px;
+}
+
+/* Footer */
+.doctor-footer {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+}
+
+/* Table adjustments */
+.table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1200px;
+}
+
+th {
+    text-align: left;
+    padding: 15px 10px;
+    background: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+    font-size: 13px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #e9ecef;
+    color: #555;
+}
+
+tr:hover {
+    background: #f8f9fa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .doctor-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

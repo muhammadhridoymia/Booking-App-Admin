@@ -14,28 +14,25 @@ export const AuthProvider = ({ children }) => {
 
   const API = process.env.REACT_APP_SERVER_URL;
 
-  const getAppointments = async () => {
-    const res = await axios.get(`${API}/api/appointments`);
-    setAppointment(res.data.appointments);
-    console.log(res);
-    return res.data.appointments;
-  };
-
-  const getDoctors = async () => {
-    const res = await axios.get(`${API}/api/get/doctors`);
-    setDoctors(res.data);
-    console.log("doctors", res.data);
-    return res;
-  };
-
-  const getUsers = async () => {
-    const res = await axios.get(`${API}/api/users/get`);
-    setusers(res.data.users);
-    console.log("users", res.data.users);
-    return res;
-  };
-
   useEffect(() => {
+    const getAppointments = async () => {
+      const res = await axios.get(`${API}/api/appointments`);
+      setAppointment(res.data.appointments);
+      return res.data.appointments;
+    };
+
+    const getDoctors = async () => {
+      const res = await axios.get(`${API}/api/get/doctors`);
+      setDoctors(res.data);
+      return res;
+    };
+
+    const getUsers = async () => {
+      const res = await axios.get(`${API}/api/users/get`);
+      setusers(res.data.users);
+      return res;
+    };
+
     getAppointments();
     getDoctors();
     getUsers();

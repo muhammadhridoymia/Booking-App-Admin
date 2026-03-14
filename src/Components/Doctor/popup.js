@@ -44,6 +44,8 @@ const DoctorPopup = ({ isOpen, onClose, onSuccess }) => {
         }
     };
 
+      const API = process.env.REACT_APP_SERVER_URL;
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -70,7 +72,7 @@ const DoctorPopup = ({ isOpen, onClose, onSuccess }) => {
             }
 
             // Send to backend
-            const response = await axios.post('http://localhost:5000/api/doctors', formDataToSend, {
+            const response = await axios.post(`${API}/api/doctors`, formDataToSend, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

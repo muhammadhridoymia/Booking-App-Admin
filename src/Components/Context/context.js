@@ -12,9 +12,11 @@ export const AuthProvider = ({ children }) => {
   const [doctors, setDoctors] = useState([]);
   const [users, setusers] = useState([]);
 
-  const API = process.env.REACT_APP_SERVER_URL;
+  
 
   useEffect(() => {
+    const API = process.env.REACT_APP_SERVER_URL;
+    
     const getAppointments = async () => {
       const res = await axios.get(`${API}/api/appointments`);
       setAppointment(res.data.appointments);
